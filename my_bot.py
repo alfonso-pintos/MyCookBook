@@ -3,6 +3,7 @@
 # This example requires the 'message_content' privileged intent to function.
 
 import discord
+import secret_keys
 
 
 class MyClient(discord.Client):
@@ -23,4 +24,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run("MTM2NDAwNDcyMzEwNzE2ODM0Nw.G1LIH4.ZdNKcRaF1Jl_4PGpcdb9wBsjLgki2hOVZxfufk")
+client.run(secret_keys.DISCORD_TOKEN)
